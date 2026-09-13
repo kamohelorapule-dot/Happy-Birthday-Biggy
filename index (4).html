@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biggy Turns 40: A Retrospective on Cars I Cannot Afford</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #f6f2ea;
+    --ink: #221f1a;
+    --ink-soft: #55504a;
+    --rule: #ddd5c7;
+    --maroon: #8a2f2f;
+  }
+
+  *{ box-sizing: border-box; }
+
+  body{
+    margin:0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    line-height: 1.65;
+  }
+
+  .meta-font{ font-family: 'Inter', sans-serif; }
+
+  .masthead{
+    border-bottom: 1px solid var(--rule);
+    padding: 18px 24px;
+  }
+  .masthead-inner{
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .masthead-title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+  }
+  .masthead-issue{
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+  }
+
+  article{
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 56px 24px 100px;
+  }
+
+  .tags{
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: var(--maroon);
+    letter-spacing: 0.02em;
+    margin-bottom: 18px;
+  }
+  .tags span:not(:last-child)::after{ content: " / "; color: var(--rule); }
+
+  h1.title{
+    font-size: clamp(2rem, 6vw, 2.9rem);
+    line-height: 1.12;
+    margin: 0 0 20px;
+    font-weight: 700;
+  }
+
+  .dek{
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin: 0 0 28px;
+  }
+
+  .byline-row{
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+  }
+  .byline-row strong{ color: var(--ink); font-weight: 600; }
+  .dot{ color: var(--rule); }
+
+  figure{ margin: 34px 0; }
+  figure img{
+    width: 100%;
+    display: block;
+    border-radius: 2px;
+  }
+  figcaption{
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+
+  .two-up{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .two-up figure{ margin: 0; }
+  @media (max-width: 560px){ .two-up{ grid-template-columns: 1fr; } }
+
+  p{ margin: 0 0 22px; font-size: 1.08rem; }
+
+  h2{
+    font-size: 1.5rem;
+    margin: 46px 0 18px;
+    font-weight: 700;
+  }
+
+  blockquote{
+    margin: 36px 0;
+    padding: 4px 0 4px 22px;
+    border-left: 3px solid var(--maroon);
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 1.15rem;
+  }
+
+  .report-card{
+    background: #fffdf9;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 24px 26px;
+    margin: 34px 0;
+  }
+  .report-card .kicker{
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    color: var(--maroon);
+    margin-bottom: 10px;
+  }
+  .report-card ul{
+    margin: 12px 0 0;
+    padding-left: 20px;
+  }
+  .report-card li{ margin-bottom: 8px; font-size: 1.02rem; }
+
+  .certificate{
+    background: #fffdf9;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 30px 28px;
+    margin: 34px 0;
+  }
+  .certificate .kicker{
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    color: var(--maroon);
+    margin-bottom: 8px;
+  }
+  .certificate h3{
+    margin: 0 0 16px;
+    font-size: 1.25rem;
+  }
+  .certificate ul{ padding-left: 20px; margin: 0 0 18px; }
+  .certificate li{ margin-bottom: 8px; }
+  .sign-row{
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+  }
+  .sign-row div{ min-width: 160px; }
+  .sign-row .name{ font-weight: 600; color: var(--ink); }
+  .sign-row small{ display:block; color: var(--ink-soft); margin-top: 2px; }
+
+  .birthday-frame{
+    position: relative;
+    max-width: 320px;
+    margin: 40px auto;
+    padding: 30px 10px 10px;
+  }
+  .birthday-frame .portrait-figure{
+    max-width: 220px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+  }
+  .birthday-frame .portrait-figure img{
+    border-radius: 50%;
+    border: 3px solid var(--maroon);
+    width: 100%;
+  }
+  .balloon{
+    position: absolute;
+    width: 46px;
+    height: 58px;
+    border-radius: 50% 50% 50% 50% / 58% 58% 42% 42%;
+    z-index: 1;
+  }
+  .balloon::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 1px;
+    height: 60px;
+    background: var(--ink-soft);
+    opacity: 0.5;
+  }
+  .balloon::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 0;
+    transform: translateX(-50%);
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid inherit;
+  }
+  .balloon-1{ background: var(--maroon); top: -14px; left: 6px; transform: rotate(-8deg); }
+  .balloon-2{ background: #c9a24b; top: -22px; right: 10px; transform: rotate(7deg); width: 40px; height: 52px; }
+  .balloon-3{ background: #5c7a63; top: -4px; right: 60px; transform: rotate(-4deg); width: 34px; height: 44px; }
+  .confetti{
+    position: absolute;
+    z-index: 2;
+    border-radius: 2px;
+  }
+  .c1{ width:8px; height:8px; background: var(--maroon); top: 6px; left: 22px; transform: rotate(20deg); }
+  .c2{ width:6px; height:6px; background: #c9a24b; top: 18px; right: 24px; transform: rotate(-15deg); border-radius: 50%; }
+  .c3{ width:7px; height:7px; background: #5c7a63; bottom: 10px; left: 4px; transform: rotate(40deg); }
+  .c4{ width:6px; height:6px; background: var(--maroon); bottom: 20px; right: 8px; border-radius: 50%; }
+  .c5{ width:8px; height:3px; background: #c9a24b; top: 46px; left: -6px; transform: rotate(-30deg); }
+  .badge-40{
+    position: absolute;
+    z-index: 4;
+    bottom: 4px;
+    right: 6px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--maroon);
+    color: var(--paper);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--paper);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transform: rotate(-6deg);
+  }
+  .birthday-caption{
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    margin-top: -18px;
+    margin-bottom: 30px;
+  }
+
+  .signoff{
+    margin-top: 46px;
+    font-style: italic;
+    color: var(--ink-soft);
+    border-top: 1px solid var(--rule);
+    padding-top: 24px;
+  }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="masthead-inner">
+    <div class="masthead-title meta-font">BARGAIN BIN MOTORS &nbsp;&middot;&nbsp; the newsletter nobody asked for</div>
+    <div class="masthead-issue meta-font">Birthday Issue</div>
+  </div>
+</div>
+
+<article>
+
+  <div class="tags meta-font">
+    <span>BIRTHDAYS</span><span>CARS</span><span>SIBLING COMMENTARY</span>
+  </div>
+
+  <h1 class="title">Biggy Turns 40: A Retrospective on Cars I Cannot Afford</h1>
+  <p class="dek">In which a lifelong car obsession, one very specific link, and a go-kart with a grudge all collide on the same birthday.</p>
+
+  <div class="byline-row">
+    <span>By <strong>Your Sibling</strong></span>
+    <span class="dot">&middot;</span>
+    <span>September 13, 2026</span>
+    <span class="dot">&middot;</span>
+    <span>3 min read</span>
+  </div>
+
+  <p>Everyone in this family has known for roughly two decades that Biggy loves cars more than most people love their own children. It's not news. It's practically a personality trait at this point, filed somewhere between "always missing in action" and "will absolutely tell you the horsepower of a car you didn't ask about." So when, this year, exactly one link showed up on my WhatsApp, nobody needed a translator.</p>
+
+  <figure>
+    <img src="https://raw.githubusercontent.com/kamohelorapule-dot/Happy-Birthday-Biggy/main/car%201.jpg" alt="Screenshot of the Insostar TikTok profile that started it all">
+    <figcaption>The message in question: sent straight to my WhatsApp, no group chat, no witnesses. "Insostar official on TikTok." No caption, no follow-up. Didn't need one.</figcaption>
+  </figure>
+
+  <p>That's the thing about a real car guy &mdash; he only has to point at something once. No repeated hinting, no strategically-placed screenshots at 2am. One link, sent in passing, and it lodges itself permanently into the recipient's brain, where it now lives rent-free next to "his birthday is coming up" and "I have not budgeted for this."</p>
+
+  <div class="two-up">
+    <figure>
+      <img src="https://raw.githubusercontent.com/kamohelorapule-dot/Happy-Birthday-Biggy/main/car%201.jpg" alt="Insostar car, angle one">
+      <figcaption>Exhibit A, angle one.</figcaption>
+    </figure>
+    <figure>
+      <img src="https://raw.githubusercontent.com/kamohelorapule-dot/Happy-Birthday-Biggy/main/car%202.jpg" alt="Insostar car, angle two">
+      <figcaption>Exhibit A, angle two, for those who needed more convincing.</figcaption>
+    </figure>
+  </div>
+
+  <h2>Meanwhile: proof of commitment</h2>
+
+  <p>As if the universe needed further evidence that Biggy takes cars seriously, he recently went go-kart racing &mdash; on Jeff's birthday, no less &mdash; and came back with the kind of injuries usually reserved for people who've made poor life choices at high speed. Most people just save pictures of cars. Biggy went and broke actual bones for the cause, on someone else's special day.</p>
+
+  <div class="report-card">
+    <div class="kicker meta-font">INCIDENT REPORT &mdash; FILED FOR THE RECORD</div>
+    <ul>
+      <li>Vehicle: one (1) go-kart, top speed generously described as "not that fast"</li>
+      <li>Occasion: Jeff's birthday, now permanently overshadowed</li>
+      <li>Driver: Biggy, lifelong car enthusiast, first-time crash test dummy</li>
+      <li>Damage to the body: broken bones</li>
+      <li>Damage to the enthusiasm: none whatsoever</li>
+      <li>Official statement from driver: reportedly still worth it</li>
+    </ul>
+  </div>
+
+  <p>Nobody asked him to prove his dedication. He did it anyway, at full send, at forty years old, on a day that belonged to someone else entirely. Please heal up so you can go back to lecturing me about horsepower at full volume.</p>
+
+  <h2>Which brings us to the gift</h2>
+
+  <p>I heard the hint. I looked at the actual price. I checked my account balance twice, hoping it had changed since the first time. It had not. So, in the spirit of showing up anyway&hellip;</p>
+
+  <figure>
+    <img src="https://raw.githubusercontent.com/kamohelorapule-dot/Happy-Birthday-Biggy/main/mini%20car.jpg" alt="A toy car, presented as the actual gift">
+    <figcaption>Biggy's First Insostar, Scale 1:64. Same shine, same energy, 100% less likely to bankrupt the gift-giver.</figcaption>
+  </figure>
+
+  <blockquote>Not to scale with your actual expectations. Batteries, fame, and horsepower not included.</blockquote>
+
+  <h2>The paperwork</h2>
+
+  <p>Nothing says "I love you" quite like a legally non-binding IOU, so here's the fine print, for the record.</p>
+
+  <div class="certificate">
+    <div class="kicker meta-font">CERTIFICATE OF FUTURE OWNERSHIP</div>
+    <h3>This entitles Biggy to one (1) real Insostar, upon:</h3>
+    <ul>
+      <li>Me winning the lotto (odds currently unfavorable)</li>
+      <li>A surprise promotion nobody saw coming, including my boss</li>
+      <li>You personally sponsoring 60% of the purchase, no judgment</li>
+      <li>The toy car version mysteriously appreciating in value</li>
+    </ul>
+    <div class="sign-row">
+      <div>
+        <div class="name">Your broke sibling</div>
+        <small>signed with love and an empty wallet</small>
+      </div>
+      <div>
+        <div class="name">Biggy</div>
+        <small>signature pending, gift accepted anyway</small>
+      </div>
+    </div>
+  </div>
+
+  <h2>Closing thoughts</h2>
+
+  <div class="birthday-frame">
+    <span class="balloon balloon-1"></span>
+    <span class="balloon balloon-2"></span>
+    <span class="balloon balloon-3"></span>
+    <span class="confetti c1"></span>
+    <span class="confetti c2"></span>
+    <span class="confetti c3"></span>
+    <span class="confetti c4"></span>
+    <span class="confetti c5"></span>
+    <div class="portrait-figure">
+      <img src="https://raw.githubusercontent.com/kamohelorapule-dot/Happy-Birthday-Biggy/main/thabo-removebg-preview.png" alt="Biggy">
+    </div>
+    <div class="badge-40">40</div>
+  </div>
+  <p class="birthday-caption">Biggy, officially in his forties, balloons non-negotiable.</p>
+
+  <p>Joking aside &mdash; forty looks good on you, broken bones and all. You deserve the real car, the loud one, the one that turns heads on the way to nowhere in particular. Until then, you've got a toy car, an incident report, a ridiculous certificate, and someone who would empty their account for you the second it's not empty already.</p>
+
+  <p class="signoff">Happy 40th, Biggy. I love you, big guy.</p>
+
+</article>
+
+</body>
+</html>
